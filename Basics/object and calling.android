@@ -1,0 +1,38 @@
+Inherited class by name practise class
+
+public class practice extends ClassA{
+   public static void main(String[] args){
+       practice Practise=new practice();
+       Practise.cont();
+   }
+    public void cont(){
+    int sum=super.add(7,7);
+    System.out.println("the sum of a and b is "+sum);//here we are accessing the inherited class
+    //since multiple inheritence is not allowed in java so we have to create a object of another class as instance
+        ClassB b;       //here b is null so we are assigning instance by using new keyword
+        b=new ClassB();
+        int product=b.mul(7,7);
+        System.out.println("the sum of a and b is "+product);
+
+    }
+
+}
+parent class Class A
+package com.example.myapplication;
+
+public class ClassA {
+    public int add(int a,int b){
+
+        return a+b;
+    }
+}
+
+parent class Class b
+package com.example.myapplication;
+
+public class ClassB {
+    public int mul(int a, int b) {
+
+        return a * b;
+    }
+}
